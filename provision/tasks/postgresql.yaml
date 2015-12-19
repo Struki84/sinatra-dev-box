@@ -1,0 +1,21 @@
+- name: postgresql | gather user data
+  set_fact:
+    # POSTGRESQL
+    - db_name: 
+    - db_user: 
+    - db_user_password: 
+
+- name: postgresql | create database
+  sudo: yes
+  sudo_user: postgres
+  postgresql_db: name={{db_name}}
+  
+- name: postgresql | create user
+  sudo: yes
+  sudo_user: postgres
+  postgresql_user: "db={{  db_name }} name={{ db_user }} password={{ db_user_password }} priv=ALL"
+
+- name: postgresql | set user premissions
+  sudo: yes
+  sudo_user: postgres
+  postgresql_user: name="{{db_user}}" role_attr_flags=NOSUPERUSER,NOCREATEDB 

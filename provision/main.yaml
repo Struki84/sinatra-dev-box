@@ -1,0 +1,28 @@
+- hosts: localhost
+  connection: local
+  
+  ###################
+  ### CONFIG VARS ###
+  ###################
+  vars:
+  	# RBENV
+    - rbenv_root_folder: /usr/local/rbenv
+    - ruby_version: 2.0.0-p353
+    #NGINX
+    - config_file_path: files/nginx.conf
+
+  tasks:
+  	- include: dependencies.yaml
+  	- include: rbenv.yaml
+  		vars:
+  			rbenv_root: rbenv_root_folder
+  			ruby_version: ruby_version 
+  	- include: postgresql.yaml
+  	- include: nginx.yaml	
+  		vars:
+  			config: config_file_path
+
+  handlers:
+  	- include: global.yaml
+  		vars:
+  			rbenv_root: rbenv_root_folder
