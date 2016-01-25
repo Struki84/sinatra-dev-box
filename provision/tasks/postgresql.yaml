@@ -1,10 +1,3 @@
-- name: postgresql | gather user data
-  set_fact:
-    # POSTGRESQL
-    - db_name: 
-    - db_user: 
-    - db_user_password: 
-
 - name: postgresql | create database
   sudo: yes
   sudo_user: postgres

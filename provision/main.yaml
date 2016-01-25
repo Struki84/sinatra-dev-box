@@ -1,9 +1,7 @@
 - hosts: localhost
   connection: local
   
-  ###################
-  ### CONFIG VARS ###
-  ###################
+  - include_vars: ../config.yaml
   vars:
   	# RBENV
     - rbenv_root_folder: /usr/local/rbenv
@@ -12,15 +10,32 @@
     - config_file_path: files/nginx.conf
 
   tasks:
+    #Setup Distro and Install pkgs
   	- include: dependencies.yaml
-  	- include: rbenv.yaml
+  	
+    #Install rben ruby manager
+    - include: rbenv.yaml
   		vars:
   			rbenv_root: rbenv_root_folder
   			ruby_version: ruby_version 
-  	- include: postgresql.yaml
+  	
+    #Install Postgresl databse, and create user/db structure
+    - include: postgresql.yaml
+      vars:
+        db_name: db_name
+        db_user: db_username
+        db_user_password: db_password
+
+    #Instal Ngnix server
   	- include: nginx.yaml	
   		vars:
   			config: config_file_path
+
+    #Install Thin ruby server
+    - include: thin.yaml
+
+    #Install ruby bundler
+    - include: bundler.yaml
 
   handlers:
   	- include: global.yaml

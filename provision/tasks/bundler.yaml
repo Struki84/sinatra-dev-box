@@ -1,7 +1,7 @@
 - name: rubygems | install bundler
 	command: gem install bundler
 
-- name: bundler | build app dependencies
-  command: /usr/local/rbenv/versions/2.0.0-p353/bin/bundle install chdir=/var/www/app/
-  sudo: yes
-  sudo_user: vagrant
+# - name: bundler | build app dependencies
+#   command: /usr/local/rbenv/versions/2.0.0-p353/bin/bundle install chdir=/var/www/app/
+#   sudo: yes
+#   sudo_user: vagrant

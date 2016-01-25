@@ -1,0 +1,15 @@
+###################
+### CONFIG VARS ###
+###################
+
+# RBENV
+rbenv_root_folder: /usr/local/rbenv
+ruby_version: 2.0.0-p353
+
+#NGINX
+config_file_path: files/nginx.conf
+
+#DB SETUP
+db_username: ruby_developer
+db_password: developer
+db_name: ruby_server_db
