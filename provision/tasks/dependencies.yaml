@@ -14,3 +14,6 @@
     - libxml2-dev
     - libxslt1-dev
     - zlib1g-dev
+    - libpq-dev
+    - postgresql
+    - python-psycopg2

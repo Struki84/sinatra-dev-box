@@ -1,3 +1,6 @@
+- name: postgresql | get vars
+  include_vars: ../config.yaml
+
 - name: postgresql | create database
   sudo: yes
   sudo_user: postgres
