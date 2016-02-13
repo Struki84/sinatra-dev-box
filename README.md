@@ -2,13 +2,14 @@
 Vagrant Ruby Box
 ====
 
-Vagrant provisioning profile for deploying Ubuntu/Ruby machine on local or remote host. 
+Vagrant provisioning profile for deploying Ubuntu/Ruby machine on local or remote vagrant host. 
 
 Prequisits
 ----
 
 + Vagrant
 + VirtualBox (or other type of vritualisation engine)
++ 
 
 Description
 ----
