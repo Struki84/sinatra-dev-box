@@ -50,5 +50,6 @@ Setup
 
 Troubleshoot
 ----
++ if you run the provision for the first time, vagrant will ask you for your root password in order to edit `/etc/hosts` 
 + If you run the provision for the first time, or install new version of ruby, it may take a very long time
 + You can always run vagrant `vagrant provision` to reset the server
