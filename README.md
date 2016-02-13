@@ -51,5 +51,5 @@ Setup
 
 Troubleshoot
 ----
-+ If you run the provision for the forst time, or installing new version of ruby, it may take a very long time
++ If you run the provision for the first time, or install new version of ruby, it may take a very long time
 + You can always run vagrant `vagrant provision` to reset the server
