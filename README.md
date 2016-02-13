@@ -9,7 +9,6 @@ Prequisits
 
 + Vagrant
 + VirtualBox (or other type of vritualisation engine)
-+ 
 
 Description
 ----
