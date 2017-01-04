@@ -6,6 +6,13 @@
     db_user_password: developer
 
   tasks:
+    - name: postgresql | install 
+      sudo: yes
+      apt: pkg={{ item }} state=latest install_recommends=no
+      with_items:
+        - postgresql
+        - python-psycopg2
+
     - name: postgresql | create database
       sudo: yes
       sudo_user: postgres
