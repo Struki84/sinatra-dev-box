@@ -9,7 +9,7 @@
     #Install postgresql database
     - include: tasks/postgresql.yaml
     #Install ngnix server 
-    - include: tasks/nginx.yaml
+    #- include: tasks/nginx.yaml
     #Install thin ruby server
     - include: tasks/thin.yaml
     #Install ruby bundler
