@@ -13,7 +13,7 @@ Description
 ----
 Sinatra Dev Box comes with the following tools:
 
-+ ruby 2.3.3
++ ruby 2.3.2
 + sinatra framework 1.4.7 
 + rbenv ruby manager
 + ruby bundler
@@ -37,9 +37,9 @@ vars:
 For setting up Vagrant specific settings refer to `Vagrantfile`
 
 ```
-node.vm.box = "ubuntu/trusty64" 																		# sets the version of OS runing on the box
-node.vm.network :private_network, ip: "192.168.100.101" 						# append custom local ip
-node.vm.hostname = 'sinatra-box.dev'																# set box hostname
+node.vm.box = "ubuntu/trusty64" # sets the version of OS runing on the box
+node.vm.network :private_network, ip: "192.168.100.101" # append custom local ip to vagrant box
+node.vm.hostname = 'sinatra-box.dev' # set box hostname
 node.hostmanager.aliases = %w(www.sinatra-box.dev sinatra-box.dev)	# set box local web address
 ```
 
@@ -58,6 +58,6 @@ After the vagrant box is provisioned thin server will start and serve your sinat
 Troubleshoot
 ----
 + if you run the provision for the first time, vagrant may ask you for your root password
-+ If you run the provision for the first time, or install new version of ruby, it may take a very long time
++ If you run the provision for the first time it may take a very long time
 + If server stops responding or stops function run `vagrant provision`to reset it 
 + thin server is run on each `vagrant up`
