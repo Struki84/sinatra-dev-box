@@ -4,7 +4,7 @@ Sinatra Development Box
 
 Vagrant provisioning profile for deploying Ubuntu/Ruby/Sinatra machine on local host. 
 
-This box is a basic sinatra server, supported by [thin](https://github.com/macournoyer/thin), *and it is not intended to be used in production.* 
+This box is a basic sinatra server, supported by [thin](https://github.com/macournoyer/thin), **and it is not intended to be used in production.**
 
 This automation script is an attempt at a fire-and-forget server setup script, after provisioning, you should be able to access your sinatra-dev-box at `http://sinatra-box.dev:8080
 
