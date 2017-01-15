@@ -12,7 +12,7 @@ $script = <<SCRIPT
   sudo apt-get -y install git
 
   # install ruby developer packages   
-  sudo apt-get -y install make build-essential libcurl4-openssl-dev libmysqlclient-dev libreadline-dev libssl-dev libxml2-dev libxslt-dev python-dev zlib1g-dev libpq-dev 
+  sudo apt-get -y install make build-essential libcurl4-openssl-dev libmysqlclient-dev libreadline-dev libssl-dev libxml2-dev libxslt-dev python-dev zlib1g-dev
 
   # install rbenv and ruby-build
   sudo -u vagrant -H git clone git://github.com/rbenv/rbenv.git /home/vagrant/.rbenv
@@ -48,7 +48,7 @@ $script = <<SCRIPT
   # nvaigate to app root dir
   cd `dirname $0`
   if [ ! -f db_setup.yml ]; then
-      cd /var/www/app
+      cd /home/vagrant
       echo $0
   fi
 
